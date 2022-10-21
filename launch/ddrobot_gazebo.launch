@@ -1,0 +1,9 @@
+<launch>
+    <arg name="world_name" default="$(find machine_vision_bonus)/worlds/garden.world"/>
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world_name)"/>
+    </include>
+
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-unpause -urdf -model ddrobot -param robot_description" />
+</launch>

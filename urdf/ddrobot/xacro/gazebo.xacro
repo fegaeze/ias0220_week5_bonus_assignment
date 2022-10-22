@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <gazebo reference="chasis">
-        <material>Gazebo/Yellow</material>
+        <material>Gazebo/Red</material>
     </gazebo>
     <gazebo reference="right_wheel">
         <material>Gazebo/Black</material>
@@ -10,5 +10,4 @@
     <gazebo reference="left_wheel">
         <material>Gazebo/Black</material>
     </gazebo>
-    
 </robot>

@@ -21,18 +21,18 @@
         <link name="chasis">
 
             <!-- Main Robot Body -->
-            <visual name="main_chasis">
+            <visual>
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
                 <geometry>
                     <cylinder radius="${chasis_radius}" length="${chasis_height}"/>
                 </geometry>
-                <material name="yellow" />
+                <material name="red" />
             </visual>
             <collision>
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
                 <geometry>
                     <cylinder radius="${chasis_radius}" length="${chasis_height}"/>
-                </geometry>   
+                </geometry> 
             </collision>
             <inertial>
                 <mass value="${chasis_mass}"/>
@@ -40,12 +40,12 @@
             </inertial>  
 
             <!-- Passive Wheel Holder -->
-            <visual name="passive_wheel_holder">
+            <visual>
                 <origin xyz="0.2 0 -0.075" rpy="0 0 0" />
                 <geometry>
                     <cylinder radius="${passive_wheel_holder_radius}" length="${passive_wheel_holder_height}"/>
                 </geometry>
-                <material name="yellow" />
+                <material name="red" />
             </visual>
             <collision>
                 <origin xyz="0.2 0 -0.075" rpy="0 0 0" />
@@ -59,12 +59,12 @@
             </inertial>
 
             <!-- Passive Wheel -->
-            <visual name="passive_wheel">
+            <visual>
                 <origin xyz="0.2 0 -0.15" rpy="0 0 0" />
                 <geometry>
                     <sphere radius="${passive_wheel_radius}" />
                 </geometry>
-                <material name="yellow" />
+                <material name="red" />
             </visual>
             <collision>
                 <origin xyz="0.2 0 -0.15" rpy="0 0 0" />
@@ -76,6 +76,7 @@
                 <mass value="${passive_wheel_mass}"/>
                 <inertia ixx="${passive_wheel_inertia_calc}" ixy="0.0" ixz="0.0" iyy="${passive_wheel_inertia_calc}" iyz="0.0" izz="${passive_wheel_inertia_calc}"/>
             </inertial>
+            
         </link> 
         <joint name="joint_base_footprint__chasis" type="fixed">
             <origin xyz="0 0 0" rpy="0 0 0" />

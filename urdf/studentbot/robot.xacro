@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="studentbot">
+
+    <xacro:include filename="$(find machine_vision_bonus)/urdf/studentbot/xacro/chasis.xacro"/>
+    <xacro:include filename="$(find machine_vision_bonus)/urdf/studentbot/xacro/wheels.xacro"/>
+    <xacro:include filename="$(find machine_vision_bonus)/urdf/studentbot/xacro/materials.xacro"/>
+    <xacro:include filename="$(find machine_vision_bonus)/urdf/studentbot/xacro/gazebo.xacro"/>
+
+    <!-- Robot Base Footprint -->
+    <link name="base_footprint"></link>
+
+    <!-- Robot Chasis -->
+    <xacro:chasis />
+
+    <!-- Robot Wheels -->
+    <xacro:wheel prefix="left" offset="0.45" />
+    <xacro:wheel prefix="right" offset="-0.45" />
+
+</robot>

@@ -4,10 +4,16 @@
     <gazebo reference="chasis">
         <material>Gazebo/Red</material>
     </gazebo>
-    <gazebo reference="right_wheel">
+    <gazebo reference="right_front_wheel">
         <material>Gazebo/Black</material>
     </gazebo>
-    <gazebo reference="left_wheel">
+    <gazebo reference="right_back_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="left_front_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="left_back_wheel">
         <material>Gazebo/Black</material>
     </gazebo>
 </robot>

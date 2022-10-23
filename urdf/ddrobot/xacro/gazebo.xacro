@@ -1,19 +1,37 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+    <xacro:macro name="robot_dynamics">
+        <mu1 value="200.0"/>
+        <mu2 value="100.0"/>
+        <kp value="10000000.0" />
+        <kd value="1.0" />
+    </xacro:macro>
+
+    <!-- Reference to robot links -->
     <gazebo reference="chasis">
         <material>Gazebo/Red</material>
     </gazebo>
     <gazebo reference="right_front_wheel">
+        <xacro:robot_dynamics />
         <material>Gazebo/Black</material>
     </gazebo>
     <gazebo reference="right_back_wheel">
+        <xacro:robot_dynamics />
         <material>Gazebo/Black</material>
     </gazebo>
     <gazebo reference="left_front_wheel">
+        <xacro:robot_dynamics />
         <material>Gazebo/Black</material>
     </gazebo>
     <gazebo reference="left_back_wheel">
+        <xacro:robot_dynamics />
         <material>Gazebo/Black</material>
     </gazebo>
+
+    <!-- Gazebo Plugins -->
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"></plugin>
+    </gazebo>
+
 </robot>

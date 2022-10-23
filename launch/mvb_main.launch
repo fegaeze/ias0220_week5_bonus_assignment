@@ -4,12 +4,12 @@
 
     <!-- set these parameters on parameter server -->
     <param name="use_gui" value="$(arg gui)"/>
+    <rosparam command="load" file="$(find machine_vision_bonus)/config/controllers.yaml" />
 
     <!-- include other necessary launch files -->
     <include file="$(find machine_vision_bonus)/launch/mvb_gazebo.launch" />
 
     <!-- start all necessary nodes -->
-    <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" if="$(arg gui)"/>
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find machine_vision_bonus)/config/machine_vision_bonus_rviz.rviz" required="true" />
 
 </launch>

@@ -4,8 +4,9 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Global Options1
-      Splitter Ratio: 0.5
+        - /TF1/Frames1
+        - /TF1/Tree1
+      Splitter Ratio: 0.8470588326454163
     Tree Height: 757
   - Class: rviz/Selection
     Name: Selection
@@ -50,6 +51,90 @@ Visualization Manager:
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        ddrobot_tf/base_footprint:
+          Value: true
+        ddrobot_tf/chasis:
+          Value: true
+        ddrobot_tf/left_back_wheel:
+          Value: true
+        ddrobot_tf/left_front_wheel:
+          Value: true
+        ddrobot_tf/right_back_wheel:
+          Value: true
+        ddrobot_tf/right_front_wheel:
+          Value: true
+        odom:
+          Value: true
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        odom:
+          ddrobot_tf/base_footprint:
+            ddrobot_tf/chasis:
+              ddrobot_tf/left_back_wheel:
+                {}
+              ddrobot_tf/left_front_wheel:
+                {}
+              ddrobot_tf/right_back_wheel:
+                {}
+              ddrobot_tf/right_front_wheel:
+                {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_footprint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        chasis:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_back_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_front_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_back_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_front_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: ddrobot_model
+      Robot Description: ddrobot/robot_description
+      TF Prefix: ddrobot_tf
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
@@ -60,57 +145,17 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: ""
-        base_footprint:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        chasis:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        left_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        right_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-      Name: RobotModel
-      Robot Description: robot_description
-      TF Prefix: ""
+      Name: studentbot_model
+      Robot Description: studentbot/robot_description
+      TF Prefix: studentbot_tf
       Update Interval: 0
       Value: true
       Visual Enabled: true
-    - Class: rviz/TF
-      Enabled: true
-      Frame Timeout: 15
-      Frames:
-        All Enabled: true
-        base_footprint:
-          Value: true
-        chasis:
-          Value: true
-      Marker Alpha: 1
-      Marker Scale: 1
-      Name: TF
-      Show Arrows: true
-      Show Axes: true
-      Show Names: true
-      Tree:
-        base_footprint:
-          chasis:
-            {}
-      Update Interval: 0
-      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: base_footprint
+    Fixed Frame: odom
     Frame Rate: 30
   Name: root
   Tools:
@@ -134,7 +179,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.5294711589813232
+      Distance: 9.539779663085938
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -150,9 +195,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.45039814710617065
+      Pitch: 0.500399112701416
       Target Frame: <Fixed Frame>
-      Yaw: 0.11039888113737106
+      Yaw: 4.008567810058594
     Saved: ~
 Window Geometry:
   Displays:

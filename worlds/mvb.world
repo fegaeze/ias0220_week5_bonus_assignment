@@ -453,20 +453,20 @@
         </link>
       </model>
       <model name='unit_sphere'>
-        <pose>-3.582890 -3.080085 0 0 -0 0</pose>
+        <pose>-3.247553 -3.080085 0 0 -0 0</pose>
         <scale>0.6 0.6 0.6</scale>
         <link name='link'>
-          <pose>-3.582890 -3.080085 0 0 -0 0</pose>
+          <pose>-3.247553 -3.080085 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='unit_sphere_0'>
-        <pose>-6.86203 4.63471 0 0 -0 0</pose>
+        <pose>-6.862030 9.561178 0 0 -0 0</pose>
         <scale>3.80584 3.80584 3.80584</scale>
         <link name='link'>
-          <pose>-6.86203 4.63471 0 0 -0 0</pose>
+          <pose>-6.862030 9.561178 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>

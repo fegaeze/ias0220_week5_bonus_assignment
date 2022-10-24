@@ -27,5 +27,6 @@
         </include>
     </group>
 
+    <node name="robot_path" pkg="machine_vision_bonus" type="locomotion.py" />
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find machine_vision_bonus)/config/mvb_rviz.rviz" required="true" />
 </launch>

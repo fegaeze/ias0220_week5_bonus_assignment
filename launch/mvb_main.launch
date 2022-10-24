@@ -1,15 +1,31 @@
 <launch>
-    <!-- values passed by command line input -->
-    <arg name="gui" default="False" />
 
-    <!-- set these parameters on parameter server -->
-    <param name="use_gui" value="$(arg gui)"/>
-    <rosparam command="load" file="$(find machine_vision_bonus)/config/controllers.yaml" />
+    <arg name="student_robot_name" value="studentbot" />  <!-- Change the value of this argument to the name of your robot -->
+    <arg name="world_name" value="$(find machine_vision_bonus)/worlds/mvb.world" />
+    <rosparam command="load" file="$(find machine_vision_bonus)/config/controllers.yaml"  />
 
     <!-- include other necessary launch files -->
-    <include file="$(find machine_vision_bonus)/launch/mvb_gazebo.launch" />
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world_name)" />
+    </include>
 
-    <!-- start all necessary nodes -->
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find machine_vision_bonus)/config/machine_vision_bonus_rviz.rviz" required="true" />
+    <!-- Spawn ddrobot -->
+    <group ns="ddrobot">
+        <param name="tf_prefix" value="ddrobot_tf" />
+        <include file="$(find machine_vision_bonus)/launch/mvb_spawn.launch">
+            <arg name="model" value="ddrobot" />
+            <arg name="init_pose" value="-x 0 -y 0 -z 0.1" />
+        </include>
+    </group>
 
+    <!-- Spawn student bot -->
+    <group ns="$(arg student_robot_name)">
+        <param name="tf_prefix" value="$(arg student_robot_name)_tf" />
+        <include file="$(find machine_vision_bonus)/launch/mvb_spawn.launch">
+            <arg name="model" value="$(arg student_robot_name)" />
+            <arg name="init_pose" value="-x 0.6 -y -8.5 -z 0.1 -R 0 -P 0 -Y 1.6" />
+        </include>
+    </group>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find machine_vision_bonus)/config/mvb_rviz.rviz" required="true" />
 </launch>

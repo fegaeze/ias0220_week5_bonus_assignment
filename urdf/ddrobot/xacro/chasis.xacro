@@ -9,22 +9,24 @@
     <xacro:property name="chasis_width" value="0.8" />
     <xacro:property name="chasis_height" value="0.25" />
     <xacro:property name="chasis_length" value="1" />
+    
     <xacro:property name="chasis_inertia_calc_ixx" value="${(1/12) * chasis_mass * ((chasis_height * chasis_height) + (chasis_length * chasis_length))}" />
     <xacro:property name="chasis_inertia_calc_iyy" value="${(1/12) * chasis_mass * ((chasis_width * chasis_width) + (chasis_height * chasis_height))}" />
     <xacro:property name="chasis_inertia_calc_izz" value="${(1/12) * chasis_mass * ((chasis_width * chasis_width) + (chasis_length * chasis_length))}" />
 
     <xacro:macro name="chasis">
-        <link name="chasis">
-            <!-- Robot Head -->
+
+        <!-- Robot Head Mount -->
+        <link name="head_mount">
             <visual>
-                <origin xyz="0.3 0 0.25" rpy="0.0 0.0 0.0" />
+                <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
                 <geometry>
                     <sphere radius="${head_radius}" />
                 </geometry>
                 <material name="red" />
             </visual>
             <collision>
-                <origin xyz="0.3 0 0.25" rpy="0.0 0.0 0.0" />
+                <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
                 <geometry>
                     <sphere radius="${head_radius}" />
                 </geometry> 
@@ -32,9 +34,16 @@
             <inertial>
                 <mass value="${chasis_mass}"/>
                 <inertia ixx="${head_inertia_calc}" ixy="0.0" ixz="0.0" iyy="${head_inertia_calc}" iyz="0.0" izz="${head_inertia_calc}"/>
-            </inertial>  
-        
-            <!-- Main Robot Body -->
+            </inertial> 
+        </link>
+        <joint name="joint_chasis__head_mount" type="fixed">
+            <origin xyz="0.35 0 0.23" rpy="0.0 0.0 0.0" />
+            <parent link="chasis"/>
+            <child link="head_mount"/>
+        </joint> 
+
+        <!-- Main Robot Body  -->
+        <link name="chasis">
             <visual>
                 <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
                 <geometry>

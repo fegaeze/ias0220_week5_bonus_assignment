@@ -12,6 +12,9 @@
     <gazebo reference="chasis">
         <material>Gazebo/Red</material>
     </gazebo>
+    <gazebo reference="head_mount">
+        <material>Gazebo/Red</material>
+    </gazebo>
     <gazebo reference="right_front_wheel">
         <xacro:robot_dynamics />
         <material>Gazebo/Black</material>
@@ -29,7 +32,7 @@
         <material>Gazebo/Black</material>
     </gazebo>
 
-    <!-- Gazebo Plugins -->
+    <!-- General Gazebo Plugins -->
     <gazebo>
         <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"></plugin>
     </gazebo>

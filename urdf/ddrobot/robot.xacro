@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ddrobot">
 
-    <xacro:include filename="$(find machine_vision_bonus)/urdf/ddrobot/xacro/chasis.xacro"/>
-    <xacro:include filename="$(find machine_vision_bonus)/urdf/ddrobot/xacro/wheels.xacro"/>
-    <xacro:include filename="$(find machine_vision_bonus)/urdf/ddrobot/xacro/gazebo.xacro"/>
-    <xacro:include filename="$(find machine_vision_bonus)/urdf/ddrobot/xacro/materials.xacro"/>
+    <xacro:include filename="$(find machine_vision_part2)/urdf/ddrobot/xacro/chasis.xacro"/>
+    <xacro:include filename="$(find machine_vision_part2)/urdf/ddrobot/xacro/wheels.xacro"/>
+    <xacro:include filename="$(find machine_vision_part2)/urdf/ddrobot/xacro/gazebo.xacro"/>
+    <xacro:include filename="$(find machine_vision_part2)/urdf/ddrobot/xacro/materials.xacro"/>
 
     <!-- Robot Base Footprint -->
     <link name="base_footprint"></link>

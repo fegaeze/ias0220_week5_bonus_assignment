@@ -2,7 +2,7 @@
     <arg name="model" />
     <arg name="init_pose" />
     
-    <param name="robot_description" command="xacro '$(find machine_vision_bonus)/urdf/$(arg model)/robot.xacro'" />
+    <param name="robot_description" command="xacro '$(find machine_vision_part2)/urdf/$(arg model)/robot.xacro'" />
 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" respawn="false" 
         args="$(arg init_pose) -urdf -model $(arg model) -param robot_description" />

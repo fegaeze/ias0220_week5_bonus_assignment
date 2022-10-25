@@ -32,7 +32,8 @@ ddrobot:
         has_acceleration_limits: true
         max_acceleration       : 6.0   # rad/s^2
 
-studentbot:
+
+observerbot:
   joint_state_controller:
     type: joint_state_controller/JointStateController
     publish_rate: 50
@@ -49,7 +50,7 @@ studentbot:
 
     wheel_radius : 0.2
     wheel_separation: 0.9
-    base_frame_id: studentbot_tf/base_footprint
+    base_frame_id: observerbot_tf/base_footprint
     odom_frame_id: odom
 
     # Velocity and acceleration limits

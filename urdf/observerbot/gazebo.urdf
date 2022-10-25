@@ -32,7 +32,7 @@
             <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
                 <alwaysOn>true</alwaysOn>
                 <updateRate>0.0</updateRate>
-                <cameraName>rrbot/camera1</cameraName>
+                <cameraName>/camera1</cameraName>
                 <imageTopicName>image_raw</imageTopicName>
                 <cameraInfoTopicName>camera_info</cameraInfoTopicName>
                 <frameName>head</frameName>
@@ -59,7 +59,7 @@
     <gazebo>
         <static>true</static>
         <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-            <robotNamespace>/studentbot</robotNamespace>
+            <robotNamespace>/observerbot</robotNamespace>
         </plugin>
     </gazebo>
 </robot>

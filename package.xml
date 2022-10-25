@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package format="2">
 
-  <name>machine_vision_bonus</name>
+  <name>machine_vision_part2</name>
   <version>0.0.1</version>
-  <description>Machine Vision Bonus Assignment for IAS0220 (Robot Guidance and Software)</description>
+  <description>Machine Vision Part 2 Assignment for IAS0220 (Robot Guidance and Software)</description>
   <maintainer email="fegaeze@gmail.com">Chioma Nkem-Eze</maintainer>
   <license>MIT</license>
 

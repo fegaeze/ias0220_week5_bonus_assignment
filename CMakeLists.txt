@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(machine_vision_bonus)
+project(machine_vision_part2)
 
 find_package(catkin REQUIRED COMPONENTS
   rospy
@@ -9,7 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 catkin_package(
-  LIBRARIES machine_vision_bonus
+  LIBRARIES machine_vision_part2
   CATKIN_DEPENDS rospy std_msgs geometry_msgs gazebo_ros
 )
 

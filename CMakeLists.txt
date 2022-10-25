@@ -14,6 +14,6 @@ catkin_package(
 )
 
 catkin_install_python(PROGRAMS
-  scripts/locomotion.py
+  scripts/ddrobot_circular_motion.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

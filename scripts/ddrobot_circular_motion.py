@@ -3,7 +3,7 @@
 import rospy
 from geometry_msgs.msg import Twist
 
-class LocomotionNode():
+class RobotCircularMotion():
 
     def __init__(self):
 
@@ -22,8 +22,8 @@ class LocomotionNode():
         self.robot_velocities = rospy.Publisher("/ddrobot/robot_velocity_controller/cmd_vel", Twist, queue_size=10)   
 
     def robot_path(self):
-        self.twist.linear.x = 3.6
-        self.twist.angular.z = 0.3
+        self.twist.linear.x = 3.5
+        self.twist.angular.z = 0.45
         self.robot_velocities.publish(self.twist)
         pass
 
@@ -36,8 +36,8 @@ class LocomotionNode():
 
 if __name__ == '__main__':
     try:
-        rospy.init_node('ddrobot_locomotion')
-        locomotion_node = LocomotionNode()
-        locomotion_node.run()
+        rospy.init_node('ddrobot_circular_motion')
+        circular_motion_node = RobotCircularMotion()
+        circular_motion_node.run()
     except rospy.ROSInterruptException:
         pass

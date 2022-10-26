@@ -1,6 +1,7 @@
 <launch>
 
     <arg name="world_name" value="$(find machine_vision_part2)/worlds/mvt.world" />
+    <arg name="rviz_config" default="$(find machine_vision_part2)/config/mvt_rviz.rviz" />
     <rosparam command="load" file="$(find machine_vision_part2)/config/controllers.yaml"  />
 
     <!-- include other necessary launch files -->
@@ -27,6 +28,6 @@
     </group>
 
     <node name="robot_path" pkg="machine_vision_part2" type="ddrobot_circular_motion.py" />
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find machine_vision_part2)/config/mvt_rviz.rviz" required="true" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_config)" required="true" />
     
 </launch>
